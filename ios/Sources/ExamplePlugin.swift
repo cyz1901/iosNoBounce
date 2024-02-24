@@ -16,7 +16,11 @@ class ExamplePlugin: Plugin {
   }
 
   @objc public func disableBouncing(_ invoke: Invoke) throws {
+    print("Hello, world1!")
+    webView.scrollView.alwaysBounceHorizontal = false
+    webView.scrollView.alwaysBounceVertical = false
     webView.scrollView.bounces = false
+    print("Hello, world2")
   }
 }
 
