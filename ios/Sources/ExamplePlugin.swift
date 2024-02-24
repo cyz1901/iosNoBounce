@@ -16,7 +16,7 @@ class ExamplePlugin: Plugin {
   }
 
   @objc public func disableBouncing(_ invoke: Invoke) throws {
-    wKWebView.scrollView.bounces = false
+    webView.scrollView.bounces = false
   }
 }
 
