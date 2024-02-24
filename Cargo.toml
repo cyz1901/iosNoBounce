@@ -1,6 +1,6 @@
 [package]
 name = "tauri-plugin-ios-no-bounce"
-version = "0.0.1"
+version = "0.0.2"
 authors = [ "You" ]
 description = ""
 edition = "2021"

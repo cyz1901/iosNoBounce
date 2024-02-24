@@ -10,7 +10,7 @@ use crate::models::*;
 const PLUGIN_IDENTIFIER: &str = "";
 
 #[cfg(target_os = "ios")]
-tauri::ios_plugin_binding!(init_plugin_ios - no - bounce);
+tauri::ios_plugin_binding!(init_plugin_ios_no_bounce);
 
 // initializes the Kotlin or Swift plugin classes
 pub fn init<R: Runtime, C: DeserializeOwned>(
@@ -20,7 +20,7 @@ pub fn init<R: Runtime, C: DeserializeOwned>(
     #[cfg(target_os = "android")]
     let handle = api.register_android_plugin(PLUGIN_IDENTIFIER, "ExamplePlugin")?;
     #[cfg(target_os = "ios")]
-    let handle = api.register_ios_plugin(init_plugin_ios - no - bounce)?;
+    let handle = api.register_ios_plugin(init_plugin_ios_no_bounce)?;
     Ok(IosNoBounce(handle))
 }
 
@@ -34,7 +34,7 @@ impl<R: Runtime> IosNoBounce<R> {
             .map_err(Into::into)
     }
 
-    pub fn ping(&self) -> crate::Result {
+    pub fn disableBouncing(&self) -> crate::Result<()> {
         self.0
             .run_mobile_plugin("disableBouncing")
             .map_err(Into::into)
