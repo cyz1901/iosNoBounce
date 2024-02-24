@@ -36,7 +36,7 @@ impl<R: Runtime> IosNoBounce<R> {
 
     pub fn disableBouncing(&self) -> crate::Result<()> {
         self.0
-            .run_mobile_plugin("disableBouncing")
+            .run_mobile_plugin("disableBouncing", EmptyStruct {})
             .map_err(Into::into)
     }
 }
