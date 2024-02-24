@@ -14,4 +14,4 @@ pub struct PingResponse {
 
 #[derive(Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
-struct EmptyStruct;
+pub struct EmptyStruct;

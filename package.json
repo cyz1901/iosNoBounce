@@ -1,6 +1,6 @@
 {
   "name": "tauri-plugin-ios-no-bounce-api",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "You",
   "description": "",
   "browser": "webview-dist/index.js",
